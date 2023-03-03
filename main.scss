@@ -1,0 +1,251 @@
+
+$green: rgb(0, 148, 95);
+$light-green: rgb(117, 156, 36);
+$main-gray: #AAAAA9; //the rgb wasn't the same color as the template rgb(136, 136, 136)
+$secondary-gray: rgb(102, 102, 102); //rgb not same color as the template for boarders. Created light-gray to match
+$light-gray: #D0D1D2;  // for gray border lines
+$orange: rgb(233, 115, 0);
+$white: rgb(255, 255, 255);
+$bg-gray: rgb(235, 247, 245);
+
+@mixin flex-col-cent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: $main-gray;
+}
+
+.site-wrapper {
+    @include flex-col-cent;
+    .header-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (min-width: 769px) {
+            align-items: flex-start;
+        }
+        .logo {
+            width: 50%;
+            padding: 20px;
+            @media (min-width: 769px) {
+                width: 25%;
+                padding: 50px;
+            }
+        }
+
+        #mobile {
+            display:block;
+        }
+        #ifweb {
+            display:none
+        }
+        @media (min-width: 769px) {
+            #mobile {
+                display: none;
+            }
+            #ifweb {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 30px;
+        color: $green;
+        text-align: center;
+        padding: 50px 10px 20px;
+    }
+    .header::after {
+        content : "";
+        align-content: center;
+        width: 80px;
+        padding-top: 15px;
+        border-bottom: 2px solid $green;
+    }
+
+    .header-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0% 4%;
+        .as-a-mortgage-loan {
+            line-height: 1.9;
+            padding: 0px 10px 50px;
+            font-size: 16px;
+            max-width: 1280px;
+        }
+        .header-button {
+            display: flex;
+            justify-content: center;
+            .btn {
+                background-color: $orange;
+                color: $white;
+                font-size: 20px;
+                padding: 10px 20px;
+                border: none;
+            }
+        }
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        .grid-template-wrapper {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr;
+            @media (min-width: 769px) {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-row-gap: 60px;
+                padding: 10px;
+                max-width: 1280px;
+            }
+            .grid-element {
+                display: flex;
+                border-bottom: 0.4px solid $light-gray;
+                padding: 17px 0px 10px;
+                @media (min-width: 769px) {
+                    border-bottom: 0.4px solid transparent;
+                    padding: 0px;
+                }
+                .grid-text-wrapper {
+                    padding-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .home-loan-title {
+                        font-size: 20px;
+                        color: $green;
+                        line-height: 1;
+                    }
+                    .home-loan-text {
+                        font-size: 16px;
+                        line-height: 1.9;
+                        width: 90%;
+                    }
+                    .home-loan-link {
+                        color: $light-green;
+                        font-size: 16px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 769px) {
+        .border {
+            border-right: 0.4px solid $light-gray;
+        }
+    }
+
+    .one-hour-loan-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 0px;
+        .one-hour-loan-box {
+            max-width: 1280px;
+            background-color: $bg-gray;
+            .one-hour-loan-title {
+                color: $white;
+                background-color: $green;
+                font-size: 20px;
+                text-align: center;
+                padding: 17px;
+            }
+            .one-hour-loan-text-box {
+                line-height: 1.9;
+                padding: 5px 12px;
+                font-size: 17px;
+                @media (min-width: 769px) {
+                    padding: 20px 90px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    
+    .quotes {
+        display: flex;
+        justify-content: center;
+        .quotes-grid-wrapper {
+            max-width: 1280px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 40px;
+            justify-items: center;
+            padding: 35px 30px 90px;
+            @media (min-width: 769px) {
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+            .quotes-wrapper{
+                display: grid;
+                grid-template-rows: 1fr .5fr .5fr;
+                justify-items: center;
+                align-items: center;
+                width: 70%;
+                .quotes-bio-pic {
+                    width: 180px;
+                    height: 180px;
+                }
+                .quotes-image {
+                    position: absolute;
+                }
+                .quotes-text {
+                    display: block;
+                    text-align: center;
+                    font-style: italic;
+                    font-size: 15px;
+                    line-height: 1.8;
+                    color: $secondary-gray;
+                }
+                .quotes-author {
+                    color: $green;
+                    line-height: 1.602;
+                    font-size: 15px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .footer-wrapper {
+        border-top: 1px solid $green;
+        padding: 30px;
+        max-width: 1280px;
+        .social-img {
+            width: 40%;
+            @media (min-width: 769px) {
+                width: 12%; 
+            }
+        }
+        .eoe {
+            font-size: 11px;
+            padding: 30px 0px 0px;
+            color: $secondary-gray;
+            line-height: 1.2;
+            a {
+                color: $secondary-gray; 
+            }
+        }
+        .privacy-Statement {
+            color: black;
+            font-size: 12px;
+            padding: 28px 0px 15px;
+        }
+    }
+}
+      
