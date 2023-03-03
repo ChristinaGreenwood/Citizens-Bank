@@ -83,17 +83,17 @@ body {
   padding: 10px 20px;
   border: none;
 }
-.site-wrapper .grid {
+.site-wrapper .citizens-advantage-grid {
   display: flex;
   justify-content: center;
 }
-.site-wrapper .grid .grid-template-wrapper {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr;
 }
 @media (min-width: 769px) {
-  .site-wrapper .grid .grid-template-wrapper {
+  .site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
@@ -103,36 +103,37 @@ body {
     max-width: 1280px;
   }
 }
-.site-wrapper .grid .grid-template-wrapper .grid-element {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element {
   display: flex;
   border-bottom: 0.4px solid #D0D1D2;
-  padding: 17px 0px 10px;
+  padding: 16px 0px 9px;
 }
 @media (min-width: 769px) {
-  .site-wrapper .grid .grid-template-wrapper .grid-element {
+  .site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element {
     border-bottom: 0.4px solid transparent;
     padding: 0px;
   }
 }
-.site-wrapper .grid .grid-template-wrapper .grid-element .grid-text-wrapper {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element .citizens-advantage-grid-text-wrapper {
   padding-left: 30px;
   display: flex;
   flex-direction: column;
 }
-.site-wrapper .grid .grid-template-wrapper .grid-element .grid-text-wrapper .home-loan-title {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element .citizens-advantage-grid-text-wrapper .home-loan-title {
   font-size: 20px;
   color: rgb(0, 148, 95);
   line-height: 1;
 }
-.site-wrapper .grid .grid-template-wrapper .grid-element .grid-text-wrapper .home-loan-text {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element .citizens-advantage-grid-text-wrapper .home-loan-text {
   font-size: 16px;
   line-height: 1.9;
   width: 90%;
 }
-.site-wrapper .grid .grid-template-wrapper .grid-element .grid-text-wrapper .home-loan-link {
+.site-wrapper .citizens-advantage-grid .citizens-advantage-grid-template-wrapper .citizens-advantage-grid-element .citizens-advantage-grid-text-wrapper .home-loan-link {
   color: rgb(117, 156, 36);
   font-size: 16px;
   text-decoration: none;
+  padding-bottom: 15px;
 }
 @media (min-width: 769px) {
   .site-wrapper .border {
@@ -172,21 +173,22 @@ body {
   justify-content: center;
 }
 .site-wrapper .quotes .quotes-grid-wrapper {
-  max-width: 1280px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 40px;
   justify-items: center;
-  padding: 35px 30px 90px;
+  padding: 40px 30px 75px;
 }
 @media (min-width: 769px) {
   .site-wrapper .quotes .quotes-grid-wrapper {
     grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 40px;
+    max-width: 1280px;
+    padding: 35px 30px 90px;
   }
 }
 .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper {
   display: grid;
-  grid-template-rows: 1fr 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr 0.4fr 0.2fr;
   justify-items: center;
   align-items: center;
   width: 70%;
@@ -194,6 +196,7 @@ body {
 .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper .quotes-bio-pic {
   width: 180px;
   height: 180px;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
 }
 .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper .quotes-image {
   position: absolute;
@@ -202,15 +205,25 @@ body {
   display: block;
   text-align: center;
   font-style: italic;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
   color: rgb(102, 102, 102);
 }
+@media (min-width: 769px) {
+  .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper .quotes-text {
+    font-size: 15px;
+  }
+}
 .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper .quotes-author {
   color: rgb(0, 148, 95);
-  line-height: 1.602;
+  line-height: 1.5;
   font-size: 15px;
-  display: block;
+}
+@media (min-width: 769px) {
+  .site-wrapper .quotes .quotes-grid-wrapper .quotes-wrapper .quotes-author {
+    display: block;
+    line-height: 1.602;
+  }
 }
 .site-wrapper .footer-wrapper {
   border-top: 1px solid rgb(0, 148, 95);
